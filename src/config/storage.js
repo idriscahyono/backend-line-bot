@@ -13,7 +13,7 @@ const storage = cloudinaryStorage({
     allowedFormats: ['jpg', 'png'],
     filename: function (req, file, cb) {
         const date = new Date()
-        cb(undefined, date.getDate() + date.getMonth() + date.getFullYear() + date.getHours() + date.getMinutes() + date.getSeconds() + file.originalname)
+        cb(undefined, date.getDate() + date.getMonth() + date.getFullYear() + date.getHours() + date.getMinutes() + date.getSeconds())
     }
 })
 
