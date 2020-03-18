@@ -1,9 +1,9 @@
 const express = require("express")
 const bodyParser = require("body-parser")
-const jwt = require('jsonwebtoken')
 const app = express()
 const cors = require("cors")
 const router = require("./config/router")
+const verifyToken = require("./lib/verifyToken")
 require("./config/db")
 
 app.use(express.json())
@@ -13,7 +13,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.get("/", function (req, res) {
+app.get("/", verifyToken, function (req, res) {
+    res.sendStatus(200)
     res.send("404 not found")
 })
 
