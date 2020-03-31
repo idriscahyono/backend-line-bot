@@ -8,12 +8,9 @@ require("./config/db")
 app.use(express.json())
 app.use(cors())
 
-app.get("/", function (req, res) {
-    res.send("404 not found")
-})
-
-app.get("/cek", verifyToken, function (req, res) {
+app.get("/", verifyToken, function (req, res) {
     res.sendStatus(200)
+    res.send("404 not found")
 })
 
 app.use(router)
