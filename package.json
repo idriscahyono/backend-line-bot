@@ -18,8 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node src/backend.js",
-    "dev": "nodemon src/backend.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC"
