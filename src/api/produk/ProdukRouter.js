@@ -7,7 +7,7 @@ const upload = multer({
     storage
 })
 
-router.get('/', verifyToken, ProdukController.index)
+router.get('/', ProdukController.index)
 router.get('/:id', verifyToken, ProdukController.show)
 router.post('/', verifyToken, ProdukController.store)
 router.put('/:id', verifyToken, ProdukController.update)

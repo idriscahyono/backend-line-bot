@@ -4,7 +4,9 @@ const ProdukModel = require('./ProdukModel')
 
 module.exports = {
     index: function (req, res) {
-        ProdukModel.find().then(function (rows) {
+        ProdukModel.find().sort({
+            harga: 1
+        }).then(function (rows) {
             res.send(rows)
         })
     },
