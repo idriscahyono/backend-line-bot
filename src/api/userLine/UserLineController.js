@@ -22,8 +22,9 @@ module.exports = {
     },
 
     update: function (req, res) {
-        UserLineModel.findByIdAndUpdate(
-            req.params.id,
+        UserLineModel.findOneAndUpdate({
+                userId: req.params.id,
+            },
             req.body, {
                 new: true
             }).then(function (row) {
