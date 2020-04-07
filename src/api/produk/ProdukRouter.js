@@ -8,10 +8,10 @@ const upload = multer({
 })
 
 router.get('/', ProdukController.index)
-router.get('/:id', verifyToken, ProdukController.show)
-router.post('/', verifyToken, ProdukController.store)
-router.put('/:id', verifyToken, ProdukController.update)
-router.delete('/:id', verifyToken, ProdukController.destroy)
+router.get('/:id', ProdukController.show)
+router.post('/', ProdukController.store)
+router.put('/:id', ProdukController.update)
+router.delete('/:id', ProdukController.destroy)
 
 router.post('/:id/upload', upload.single("image"), ProdukController.upload)
 

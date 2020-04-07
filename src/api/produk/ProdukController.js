@@ -46,7 +46,7 @@ module.exports = {
 
     upload: function (req, res) {
         ProdukModel.findByIdAndUpdate(req.params.id, {
-            image_url: req.file.url,
+            image_url: req.file.secure_url,
             public_id: req.file.public_id
         }, {
             new: true
