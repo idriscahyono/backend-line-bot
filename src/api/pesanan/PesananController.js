@@ -8,7 +8,7 @@ module.exports = {
     },
 
     show: function (req, res) {
-        UserLineModel.find({
+        PesananModel.find({
             userId: req.params.id
         }).then(function (row) {
             res.send(row)
