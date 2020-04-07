@@ -32,8 +32,8 @@ module.exports = {
     },
 
     destroy: function (req, res) {
-        PesananModel.findByIdAndDelete({
-            _id: req.params.id
+        PesananModel.deleteMany({
+            userId: req.params.id
         }).then(function (row) {
             res.send(row)
         })
