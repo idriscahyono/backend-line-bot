@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const pesananSchema = mongoose.Schema({
+const pesananSchema = new mongoose.Schema({
     userId: String,
     nama: String,
     harga: Number,
