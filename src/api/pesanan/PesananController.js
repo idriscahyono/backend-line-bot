@@ -50,7 +50,7 @@ module.exports = {
         })
     },
     updateByUserId: function (req, res) {
-        PesananModel.findOneAndUpdate({
+        PesananModel.updateMany({
                 userId: req.params.id
             },
             req.body, {
