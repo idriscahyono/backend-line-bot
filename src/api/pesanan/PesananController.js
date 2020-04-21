@@ -40,7 +40,7 @@ module.exports = {
     },
 
     update: function (req, res) {
-        PesananModel.findOneAndUpdate({
+        PesananModel.updateMany({
                 nomorBayar: req.params.id
             },
             req.body, {
