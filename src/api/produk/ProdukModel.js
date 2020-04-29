@@ -4,6 +4,7 @@ const produkSchema = new mongoose.Schema({
     nama: String,
     harga: Number,
     stock: Number,
+    berat: Number,
     image_url: String,
     public_id: String
 })
