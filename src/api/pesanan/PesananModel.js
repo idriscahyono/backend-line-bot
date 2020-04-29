@@ -4,6 +4,7 @@ const pesananSchema = new mongoose.Schema({
     userId: String,
     nama: String,
     harga: Number,
+    berat: Number,
     alamatKirim: String,
     ongkir: Number,
     userBayar: Boolean,
