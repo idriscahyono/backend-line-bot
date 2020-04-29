@@ -9,7 +9,7 @@ module.exports = {
 
     show: function (req, res) {
         ListKotaModel.find({
-            city_name: req.body.city_name
+            city_name: req.params.id
         }).then(function (row) {
             res.send(row)
         })
