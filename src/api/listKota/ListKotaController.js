@@ -8,7 +8,9 @@ module.exports = {
     },
 
     show: function (req, res) {
-        ListKotaModel.find(req.body).then(function (row) {
+        ListKotaModel.find({
+            city_name: req.body.city_name
+        }).then(function (row) {
             res.send(row)
         })
     },
