@@ -7,6 +7,7 @@ const pesananSchema = new mongoose.Schema({
     berat: Number,
     alamatKirim: String,
     ongkir: Number,
+    statusOngkir: String,
     userBayar: Boolean,
     adminBayar: Boolean,
     nomorBayar: String
