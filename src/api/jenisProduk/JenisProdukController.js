@@ -9,9 +9,7 @@ module.exports = {
 	},
 
 	show: function(req, res) {
-		JenisProduk.findOne({
-			jenis: req.params.id
-		}).then(function(row) {
+		JenisProduk.findById(req.params.id).then(function(row) {
 			res.send(row);
 		});
 	},
