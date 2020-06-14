@@ -19,7 +19,7 @@ module.exports = {
 	},
 
 	showJenis: function(req, res) {
-		ProdukModel.findOne({
+		ProdukModel.find({
 			jenis: req.params.id
 		}).then(function(row) {
 			res.send(row);
