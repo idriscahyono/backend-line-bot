@@ -7,7 +7,7 @@ const upload = multer({
 	storage
 });
 
-router.get('/', verifyToken, JenisProdukController.index);
+router.get('/', JenisProdukController.index);
 router.get('/:id', verifyToken, JenisProdukController.show);
 router.post('/', verifyToken, JenisProdukController.store);
 router.put('/:id', verifyToken, JenisProdukController.update);
