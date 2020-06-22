@@ -28,7 +28,6 @@ module.exports = {
 	show: function(req, res) {
 		PesananModel.find({
 			userId: req.params.id,
-			userBayar: false,
 			adminBayar: false
 		}).then(function(row) {
 			res.send(row);
